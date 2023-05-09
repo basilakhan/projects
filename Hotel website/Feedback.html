@@ -1,0 +1,91 @@
+<!-- 
+    Basil Abdul Majeed khan 441009192
+    Raji radhwan booqis 441007587
+    Maan Muhammad bayamin 441004501
+    rowed mohammed qurban S439009995
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback</title>
+    <link rel="shortcut icon" href="rooms/hotel_logo.jpg">
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body class="background">
+    <!--navigation bar-->
+    <nav>
+        <ul>
+            <li class="logo"><a href="index.html">MARBAR</a></li>
+            <li class="link"><a href="FeedBack.html"><i class="bi bi-chat-left-text"></i> feedback</a></li>
+            <li class="link"><a href="Login.html"><i class="bi bi-person"></i> Login</a></li>
+            <li class="link"><a href="Registeration.html"><i class="bi bi-pencil-square"></i> Register</a></li>
+            <li class="link"><a href="booking.html"><i class="bi bi-calendar"></i>   Book a Room</a></li>
+            <li class="link"><a href="index.html"><i class="bi bi-house"></i> Home</a></li>
+        </ul>
+    </nav>
+
+    <!--header-->
+    <h1 class="feedbackHeader">Feedback</h1>
+    <hr class="feddbackLine">
+
+    <!--Form-->
+    <div class="form">
+
+        <form class="feedbackForm" name="feedForm" onsubmit="return validate()" action="" novalidate>
+            <legend class="header">Write your feedback about our hotel</legend>
+
+            <textarea class="message" rows="4" cols="50" placeholder="message..." autofocus></textarea><br>
+            <input class="name" name="fname" type="text" placeholder="Enter your name">
+            <input class="email" name="email" type="email" placeholder="Email" > <br>
+
+            <select class="fieldbox" name="" id="">
+                <option class="fieldbox" value="" disabled selected>Select Rating</option>
+                <option value="">1 Star</option>
+                <option value="">2 Star</option>
+                <option value="">3 Star</option>
+                <option value="">4 Star</option>
+                <option value="">5 Star</option>
+            </select>
+            <br>
+
+            <input class="submit" type="submit" value="SUBMIT FEEDBACK">
+        </form>
+    </div>
+
+    <!--Footer-->
+    <div class="footer" align="center">
+        <small style="color: white;">Copyright Ⓒ All Rights Reserved</small>
+    </div>
+
+    <script >
+    function validate() {
+    let x = document.forms["feedForm"]["fname"].value;
+    if (x == "") {
+        alert("First name must be filled out");
+        return false;
+    }
+
+    email = document.forms["feedForm"]["email"].value;
+    if (email == "") {
+        alert("Email must be filled out");
+        return false;
+    } else if (!validateEmail(email)) {
+        alert("Email must follow the pattern: example@hotmail.com");
+        return false;
+    }
+    }
+
+    function validateEmail(input) {
+    var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    return validRegex.test(input);
+    }
+
+    
+    </script>
+</body>
+
+</html>

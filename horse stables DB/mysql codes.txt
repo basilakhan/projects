@@ -1,0 +1,121 @@
+mysql> CREATE TABLE OWNERS(
+    -> Owner_ID INT PRIMARY KEY,
+    -> Name VARCHAR(20),
+    -> PNO VARCHAR(10),
+    -> Gender CHAR DEFAULT "M",
+    -> EMAIL VARCHAR(30));
+
+mysql> CREATE TABLE STABLES(
+    -> Stable_ID INT PRIMARY KEY,
+    -> Owner_ID INT,
+    -> Name VARCHAR(30),
+    -> Location VARCHAR(25),
+    -> StallNum INT,
+    -> HorseNum INT,
+    -> Rent INT,
+    -> Area DECIMAL,
+    -> FOREIGN KEY(Owner_ID) REFERENCES OWNERS(Owner_ID) ON DELETE CASCADE ON UPDATE CASCADE);
+
+mysql> CREATE TABLE HORSES(
+    -> Horse_ID INT PRIMARY KEY,
+    -> Owner_ID INT,
+    -> Stable_ID INT,
+    -> Name VARCHAR(20),
+    -> Sire VARCHAR(20),
+    -> DAM VARCHAR(20),
+    -> BirthDate DATE,
+    -> Gender CHAR DEFAULT "F",
+    -> BREED VARCHAR(20),
+    -> TYPE VARCHAR(20),
+    -> Line VARCHAR(20),
+    -> FOREIGN KEY(Owner_ID) REFERENCES Owners(Owner_ID) ON DELETE CASCADE ON UPDATE CASCADE,
+    -> FOREIGN KEY(Stable_ID) REFERENCES STABLES(Stable_ID) ON DELETE CASCADE ON UPDATE CASCADE);
+
+mysql> CREATE TABLE AVAILABLE_STALLIONS(
+    -> Horse_ID INT UNIQUE,
+    -> Available BOOLEAN DEFAULT FALSE,
+    -> PRICE INT,
+    -> FOREIGN KEY(Horse_ID) REFERENCES HORSES(Horse_ID) ON DELETE CASCADE ON UPDATE CASCADE);
+
+mysql> CREATE TABLE WORKERS(
+    -> Worker_ID INT PRIMARY KEY,
+    -> Name VARCHAR(20),
+    -> Stable_ID INT,
+    -> PNO VARCHAR(20),
+    -> FOREIGN KEY(Stable_ID) REFERENCES STABLES(Stable_ID) ON DELETE CASCADE ON UPDATE CASCADE);
+
+mysql> CREATE TABLE SERVICES(
+    -> Service_Type VARCHAR(30),
+    -> Stable_ID INT,
+    -> FOREIGN KEY(Stable_ID) REFERENCES STABLES(Stable_ID) ON DELETE CASCADE ON UPDATE CASCADE);
+
+mysql> INSERT INTO OWNERS VALUES(111,"Mohamad Jaber","0503346728","M","mohj@outlook.com");
+
+mysql> INSERT INTO OWNERS VALUES(112,"Abdulrahman Alotaibi","0563545778","M","abo_abd@outlook.com"),
+    -> (113,"Abdulrahman Alharbi","0563544901","M","abdulrahman_harbi@outlook.com"),
+    -> (114,"Jameel Alnahdi","0535497011","M","J_nahdi@outlook.com"),
+    -> (115,"Hamad Gazi","0535678011","M","HGazi@outlook.com");
+
+mysql> INSERT INTO OWNERS VALUES(116,"Sameer Althemami","0563152738","M","ST_Stud@outlook.com"),
+    -> (117,"Saber Ghaleb","0563512838","M","Ghaleb_horses@outlook.com"),
+    -> (118,"Reham Aljehani","0544512928","F","R_Jehani@outlook.com");
+
+mysql> INSERT INTO STABLES VALUES(11,112,"AL-Otaibiah Stud","Riyadh",25,19,1500,1370),
+    -> (12,113,"Aof Stud","Jeddah",20,20,1000,900),
+    -> (13,115,"AL-Hamdiah Stud","Jeddah",15,10,750,730),
+    -> (14,111,"AL-Nasiat Stud","Riyadh",35,27,2500,1940),
+    -> (15,116,"ST Stud","Riyadh",30,28,3000,2150),
+    -> (16,116,"AL-Themamiah Stud","RiyadH",15,10,NULL,1050);
+
+mysql> INSERT INTO SERVICES VALUES("Swimming Pool",14),
+    -> ("16*20 Paddock",14),
+    -> ("10*12 Paddock",14),
+    -> ("Circular Paddock",14),
+    -> ("Training",14),
+    -> ("13*16 Paddock",15),
+    -> ("20*25 Paddock",15),
+    -> ("Walker",15),
+    -> ("Contest Training",15),
+    -> ("12*15 Paddock",11),
+    -> ("15*15 Paddock",16);
+
+mysql> INSERT INTO WORKERS VALUES(201,"Abbas",11,"0504210486"),
+    -> (202,"Jamal",11,"0504862521"),
+    -> (203,"Saeed",12,"0534662121"),
+    -> (204,"Ibrahim",13,"05346254521"),
+    -> (205,"Fareed",14,"05635634510"),
+    -> (206,"Mohamad",14,"05624523401"),
+    -> (207,"Sadeeq",15,"05313412312"),
+    -> (208,"Sameer",15,"0537452671"),
+    -> (209,"Abdallah",16,"0536341560");
+
+mysql> INSERT INTO HORSES VALUES(1001,111,14,"Badi AL-Hawajer","MigladIII","Faten AL-Hawajer","2016-3-6","M","Arabian","Beuty","Mix");
+mysql> INSERT INTO HORSES VALUES(1002,111,14,"Jameelat Athbah","ES Harir","AJ Rabiah","2019-4-8","F","Arabian","Beuty","Mix"),
+    -> (1003,112,11,"Jumanah AL-Otaibiah","Alexxander","Sabhah AL-Otaibiah","2020-5-9","F","Arabian","Beuty","Mix"),
+    -> (1004,112,11,"Somuo AL-Otaibiah","Ashhal AL-Ryan","Sabhah AL-Otaibiah","2020-1-3","F","Arabian","Beuty","Eygptian"),
+    -> (1005,112,11,"Sabhah AL-Otaibiah","Ansata Hejazi","Ansata Shahrazad","2015-6-7","F","Arabian","Beuty","Eygptian"),
+    -> (1006,116,15,"ST Raad","Fadi AL-Shaqab","Violeta","2017-5-2","M","Arabian","Beuty","Mix"),
+    -> (1007,116,16,"Rasheeq","Farazan",NULL,"2017-11-2","M","English","Jumping",NULL),
+    -> (1008,117,13,"Sengar Enaya","AJ Dinar","Ammona","2016-12-4","M","Arabian","Beuty","Mix"),
+    -> (1009,115,13,"Senan AL-Hamdiah","Sengar Enaya","Senaa AL-Hamdiah","2021-1-3","M","Arabian","Beuty","Mix"),
+    -> (1010,113,12,"Malekat Aof","Ajman ALMazen","Sebhah Aof","2020-11-12","F","Arabian","Beuty","Mix");
+
+mysql> INSERT INTO AVAILABLE_STALLIONS VALUES(1001,TRUE,3000),
+    -> (1006,TRUE,0),
+    -> (1007,FALSE,0),
+    -> (1008,TRUE,0);
+
+
+mysql> SELECT *,HorseNum-StallNum FROM STABLES ;
+
+mysql> SELECT * FROM HORSES WHERE Sire = "AJ Dinar";
+
+mysql> SELECT * FROM HORSES WHERE BREED = "English";
+mysql> SELECT * FROM HORSES WHERE TYPE = "Beuty";
+mysql> SELECT * FROM HORSES WHERE Line = "Eygptian";
+
+mysql> SELECT * FROM STABLES WHERE Stable_ID = (SELECT Stable_ID FROM SERVICES WHERE Service_Type LIKE "%Pool%");
+
+mysql> SELECT HORSES.*,STABLES.Name FROM HORSES INNER JOIN STABLES ON HORSES.Stable_ID = STABLES.Stable_ID WHERE HORSES.Name LIKE "Senan%";
+
+mysql> SELECT HORSES.Name,AVAILABLE_STALLIONS.PRICE FROM HORSES INNER JOIN AVAILABLE_STALLIONS ON HORSES.Horse_ID = AVAILABLE_STALLIONS.Horse_ID WHERE AVAILABLE_STALLIONS.Available = TRUE;

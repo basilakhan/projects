@@ -1,0 +1,322 @@
+<!-- 
+    Basil Abdul Majeed khan 441009192
+    Raji radhwan booqis 441007587
+    Maan Muhammad bayamin 441004501
+    rowed mohammed qurban S439009995
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <link rel="shortcut icon" href="rooms/hotel_logo.jpg">
+    <script type="text/javascript" src="script.js"></script>
+    <style></style>
+    <title>Booking</title>
+</head>
+
+<body class="background">
+
+    <!--header-->
+    <nav>
+        <ul>
+            <li class="logo"><a href="index.html">MARBAR</a></li>
+            <li class="link"><a href="FeedBack.html"><i class="bi bi-chat-left-text"></i> feedback</a></li>
+            <li class="link"><a href="Login.html"><i class="bi bi-person"></i> Login</a></li>
+            <li class="link"><a href="Registeration.html"><i class="bi bi-pencil-square"></i> Register</a></li>
+            <li class="link"><a href="booking.html"><i class="bi bi-calendar"></i>   Book a Room</a></li>
+            <li class="link"><a href="index.html"><i class="bi bi-house"></i> Home</a></li>
+        </ul>
+    </nav>
+
+    <!--header-->
+    <h1 class="header">Booking room</h1>
+
+    <div class="hero">
+
+        <div class="btn-box">
+            <button id="btn1" onclick="openDeluxe()">Deluxe Room</button>
+            <button id="btn2" onclick="openTwin()">Twin Room</button>
+            <button id="btn3" onclick="openFamily()">Family Room</button>
+        </div>
+
+        <!--  Deluxe Room  -->
+        <div id="content1" class="content">
+            <table class="BookingInfo">
+                <tr>
+                    <td rowspan="2">
+                        <div class="RoomImage">
+                            <img class="roomimg" src="Rooms/delux.jpg" alt="">
+                        </div>
+                    </td>
+
+                    <td>
+                        <div class="RoomInfo">
+                            <h3>Deluxe Room</h3>
+                            <p>The hotel will provide guests with air-conditioned<br>
+                                rooms offering a desk,an electric tea pot, a fridge,<br>
+                                a safety deposit box,a flat-screen TV and a private <br>
+                                Rooms contain a coffee machine,while some rooms come<br>
+                                with a balcony and others also have city views.<br>
+                                At Up Hotel Budapest all rooms are equipped with bed <br>
+                                Guests at the accommodation can enjoy a buffet breakfast.<br>
+                                Up Hotel Budapest offers 4-star accommodations<br>
+                                with a sauna and terrace.</p>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+
+                        <div class="Form1">
+                            <table class="FormTable">
+                                <tr>
+                                    <th>BOOKING FROM DATE:</th>
+                                    <td><input class="datePicker" id="fromDate1" type="date"></td>
+                                </tr>
+                                <tr>
+                                    <th>BOOKING TO DATE:</th>
+                                    <td><input class="datePicker" id="toDate1" type="date"></td>
+                                </tr>
+                                <tr>
+                                    <th>ROOM COST PER DAY:</th>
+                                    <td>100$ per day</td>
+                                </tr>
+                                <tr>
+                                    <th>ROOM TYPE:</th>
+                                    <td>Deluxe Room</td>
+                                </tr>
+                                <tr>
+                                    <th>TOTAL BEDS:</th>
+                                    <td>1 Beds</td>
+                                </tr>
+                                <tr>
+                                    <th>MAX ADULTS:</th>
+                                    <td>2 Adults</td>
+                                </tr>
+                                <tr>
+                                    <th>SERVICES:</th>
+                                    <td>seating , security , food</td>
+                                </tr>
+                            </table>
+
+                            <div class="div_submit">
+                                <button class="submitBtn1 submitBtn" onclick="bookRoom('fromDate1','toDate1')">BOOK THIS ROOM</button>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+
+        <!--  Twin Room  -->
+        <div id="content2" class="content">
+            <table class="BookingInfo">
+                <tr>
+                    <td rowspan="2">
+                        <div class="RoomImage">
+                            <img class="roomimg" src="Rooms/Twin.jpg" alt="">
+                        </div>
+                    </td>
+
+                    <td>
+                        <div class="RoomInfo">
+                            <h3>Superior Twin Room</h3>
+                            <p>The hotel will provide guests with air-conditioned<br>
+                                rooms offering a desk,an electric tea pot, a fridge,<br>
+                                a safety deposit box,a flat-screen TV and a private <br>
+                                Rooms contain a coffee machine,while some rooms come<br>
+                                with a balcony and others also have city views.<br>
+                                At Up Hotel Budapest all rooms are equipped with bed <br>
+                                Guests at the accommodation can enjoy a buffet breakfast.<br>
+                                Up Hotel Budapest offers 4-star accommodations<br>
+                                with a sauna and terrace.</p>
+                        </div>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>
+
+                        <div class="Form2">
+                            <table class="FormTable">
+                                <tr>
+                                    <th>BOOKING FROM DATE:</th>
+                                    <td><input class="datePicker" id="fromDate2" type="date"></td>
+                                </tr>
+                                <tr>
+                                    <th>BOOKING TO DATE:</th>
+                                    <td><input class="datePicker" id="toDate2" type="date"></td>
+                                </tr>
+                                <tr>
+                                    <th>ROOM COST PER DAY:</th>
+                                    <td>150$ per day</td>
+                                </tr>
+                                <tr>
+                                    <th>ROOM TYPE:</th>
+                                    <td>Twin Room</td>
+                                </tr>
+                                <tr>
+                                    <th>TOTAL BEDS:</th>
+                                    <td>2 Beds</td>
+                                </tr>
+                                <tr>
+                                    <th>MAX ADULTS:</th>
+                                    <td>2 Adults</td>
+                                </tr>
+                                <tr>
+                                    <th>SERVICES:</th>
+                                    <td>seating , security , food</td>
+                                </tr>
+                            </table>
+
+                            <div class="div_submit">
+                                <button class="submitBtn2 submitBtn" onclick="bookRoom('fromDate2','toDate3')">BOOK THIS ROOM</button>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+
+        <!--  Family Room  -->
+        <div id="content3" class="content">
+            <table class="BookingInfo">
+                <tr>
+                    <td rowspan="2">
+                        <div class="RoomImage">
+                            <img class="roomimg" src="Rooms/Family.jpg" alt="">
+                        </div>
+                    </td>
+
+                    <td>
+                        <div class="RoomInfo">
+                            <h3>Family Room</h3>
+                            <p>The hotel will provide guests with air-conditioned<br>
+                                rooms offering a desk,an electric tea pot, a fridge,<br>
+                                a safety deposit box,a flat-screen TV and a private <br>
+                                Rooms contain a coffee machine,while some rooms come<br>
+                                with a balcony and others also have city views.<br>
+                                At Up Hotel Budapest all rooms are equipped with bed <br>
+                                Guests at the accommodation can enjoy a buffet breakfast.<br>
+                                Up Hotel Budapest offers 4-star accommodations<br>
+                                with a sauna and terrace.</p>
+                        </div>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>
+                        <div class="Form3">
+                            <table class="FormTable">
+                                    <tr>
+                                        <th>BOOKING FROM DATE:</th>
+                                        <td><input class="datePicker" id="fromDate3" type="date"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>BOOKING TO DATE:</th>
+                                        <td><input class="datePicker" id="toDate3" type="date"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>ROOM COST PER DAY:</th>
+                                        <td>300$ per day</td>
+                                    </tr>
+                                    <tr>
+                                        <th>ROOM TYPE:</th>
+                                        <td>Family Room</td>
+                                    </tr>
+                                    <tr>
+                                        <th>TOTAL BEDS:</th>
+                                        <td>4 Beds</td>
+                                    </tr>
+                                    <tr>
+                                        <th>MAX ADULTS:</th>
+                                        <td>8 Adults</td>
+                                    </tr>
+                                    <tr>
+                                        <th>SERVICES:</th>
+                                        <td>seating , security , food</td>
+                                    </tr>
+                            </table>
+
+                            <div class="div_submit">
+                                <button class="submitBtn3 submitBtn" onclick="bookRoom('fromDate3','toDate3')">BOOK THIS ROOM</button>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+
+    </div>
+
+    <!--Footer-->
+    <div class="footer" align="center">
+        <small style="color: white;">Copyright Ⓒ All Rights Reserved</small>
+    </div>
+
+    <script>
+        var content1 = document.getElementById("content1");
+        var content2 = document.getElementById("content2");
+        var content3 = document.getElementById("content3");
+
+        var btn1 = document.getElementById("btn1");
+        var btn2 = document.getElementById("btn2");
+        var btn3 = document.getElementById("btn3");
+
+
+        function openDeluxe() {
+            content1.style.transform = "translateX(0)"
+            content2.style.transform = "translateX(20000%)"
+            content3.style.transform = "translateX(20000%)"
+        }
+        function openTwin() {
+            content2.style.transform = "translateX(0)"
+            content1.style.transform = "translateX(20000%)"
+            content3.style.transform = "translateX(20000%)"
+        }
+        function openFamily() {
+            content3.style.transform = "translateX(0)"
+            content2.style.transform = "translateX(20000%)"
+            content1.style.transform = "translateX(20000%)"
+        }
+        
+        function bookRoom(from,to) {
+            const FROM = document.getElementById(from);
+            const TO = document.getElementById(to);
+            
+            fromDate = FROM.value;
+            toDate = TO.value;
+            
+            if(fromDate == "" || toDate ==""){
+                FROM.style.backgroundColor = "red";
+                TO.style.backgroundColor = "red";
+                alert("Please enter booking date");
+            }
+            else if( fromDate > toDate){
+                FROM.style.backgroundColor = "red";
+                TO.style.backgroundColor = "red";
+                alert("FROM date should be small or equal to TO date");
+            }
+            else{
+                alert("You are not login");
+                window.location.replace("Registeration.html");
+                console.log("good");
+            }
+            
+        }
+
+    </script>
+</body>
+
+</html>

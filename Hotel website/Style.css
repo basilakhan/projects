@@ -1,0 +1,381 @@
+/*
+    Basil Abdul Majeed khan 441009192
+    Raji radhwan booqis 441007587
+    Maan Muhammad bayamin 441004501
+    rowed mohammed qurban S439009995
+*/
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+.background{
+    background-color: rgba(252, 245, 236, 0.863);
+}
+
+/********************       Navigation bar         *******************/
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(22, 46, 46);
+    position: relative;
+    top: 0;
+    width: 100%;
+}
+
+.logo {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 22px;
+    font-weight: bold;
+    float: left;
+}
+
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 20px;
+}
+
+
+li a:hover {
+    background-color: #111;
+}
+
+/*****************************  feedback page  ****************************/
+div.form {
+    margin: auto;
+    text-align: center;
+}
+
+.feedbackForm {
+    margin: 20px 20px 20px;
+}
+
+.feddbackLine {
+    height: 1px;
+    background-color: rgb(22, 46, 46);
+    border: none;
+}
+
+.feedbackHeader {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+input,
+select {
+    border-color: rgb(22, 46, 46);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.message {
+    margin: 0px 15px;
+    width: 700px;
+    padding: 10px;
+    display: inline-block;
+    border: 1px solid rgb(22, 46, 46);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input.name {
+    margin: 15px 15px 15px 0px;
+    width: 340px;
+    padding: 12px 20px;
+    border: 1px solid rgb(22, 46, 46);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input.email {
+    margin: 15px 0px;
+    width: 340px;
+    padding: 12px 20px;
+    border: 1px solid rgb(22, 46, 46);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+select {
+    margin: 0px 15px;
+    width: 700px;
+    padding: 12px 20px;
+    border: 1px solid rgb(22, 46, 46);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input.submit {
+    margin: 15px 15px;
+    width: auto;
+    background-color: rgb(44, 94, 94);
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/*****************************  index page  ****************************/
+.cover {
+    background-image: url(rooms/cover_background.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.welcome {
+    font-size: 50px;
+    color: #ffe4c4;
+    text-align: center;
+    margin-top: 10px;
+    margin-right: 85px;
+    margin-bottom: 260px;
+    text-shadow: 4px 4px 6px #000000;
+}
+
+.intro {
+    text-align: center;
+    font-size: 30px;
+    color: bisque;
+    text-align: center;
+    margin-bottom: 150px;
+    text-shadow: 4px 4px 6px #000000;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: fit-content;
+    margin: auto;
+}
+
+/*****************************  login page  ****************************/
+#logid {
+    color: white;
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("rooms/hotel_lobby.webp");
+}
+
+#login {
+    color: white;
+    margin-bottom:20px ;
+}
+
+#loginform{
+    margin-top: 20px;
+}
+
+#loginform input {
+    text-align: center;
+}
+
+.box {
+    background-color: rgba(40, 55, 55, 0.6);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    width: 600px;
+    padding: 40px;
+
+}
+/*****************************  registeration page  ****************************/
+#regid {
+    background-image: url("rooms/hotel_lobby.webp");
+    color: rgb(255, 255, 255);
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+#reg {
+    color: white;
+    margin-bottom: 20px;
+}
+
+#regform input {
+    text-align: center;
+}
+
+#regform{
+    padding: 20px;
+}
+
+.regbox {
+    background-color: rgba(47, 79, 79, 0.6);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    width: 600px;
+    padding: 40px;
+    border-top: 10px solid;
+    border-color: red;
+}
+
+#resetBtn {
+    border-radius: 10px;
+    background-image: url("rooms/resetbtn.jpeg");
+    width: 100px;
+    height: 45px;
+}
+
+#regform input:invalid {
+    border-color: #900;
+    background-color: #fdd;
+}
+
+#regform input:focus:invalid {
+    outline: none;
+}
+
+/*****************************  Booking page  ****************************/
+/********************       Header         *******************/
+
+.header{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.hero{
+    width: 90%;
+    height: 758px;
+    overflow: hidden;
+    position: relative;
+    margin: 0px auto;
+}
+
+.btn-box{
+    display: flex;
+    border-bottom:1px solid #ccc ;
+}
+
+.btn-box button {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0px 16px;
+    margin: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.btn-box button:hover{
+    color: rgb(55, 153, 42);
+}
+
+/********************     tab content         *******************/
+.content{
+    position: absolute;
+    resize: none;
+    transform: translateX(20000%);
+}
+#content1{
+    transform: translateX(0);
+}
+
+/********************       Form table         *******************/
+
+.BookingInfo{
+    padding: 30px;
+    margin: auto;
+}
+
+.RoomImage{
+    padding-right: 20px;
+}
+
+.roomimg{
+    width: 800px;
+    height: 100%;
+}
+
+table.FormTable tr th{
+    padding: 5px 40px;
+    text-align: center;
+}
+
+table.FormTable tr td{
+    padding: 5px 40px;
+    text-align: center;
+}
+
+table.FormTable tr:nth-child(odd) {
+    background-color: #e0dede;
+}
+
+table.FormTable tr:hover{
+    background-color: rgb(133, 216, 151);
+    transition: .5s;
+}
+
+.datePicker{
+    background-color: rgb(44, 94, 94);
+    padding: 5px 20px;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+}
+
+::-webkit-calendar-picker-indicator{
+    background-color: white;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.div_submit{
+    text-align: center;
+}
+
+.submitBtn1,.submitBtn2,.submitBtn3{
+    margin-top: 20px;
+    width: 200px;
+    background-color: rgb(44, 94, 94);
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submitBtn:hover{
+    background-color: black;
+    transition: .5s;
+}
+
+/********************       Room description         *******************/
+
+.RoomInfo{
+    margin: 10px;
+}
+
+/********************       copyrights bar         *******************/
+div.footer {
+    background: rgb(22, 46, 46);
+    height: 30px;
+    line-height: 30px;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+}

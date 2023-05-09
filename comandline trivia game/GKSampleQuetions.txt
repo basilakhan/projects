@@ -1,0 +1,5 @@
+What is the capital of kenya? \n	a-nyrobi	b-adis ababa	c-alkhartom	d-chad
+What is the science that studies everything outside the earth is called? \n	a-geology	b-mythology	c-astronomy	d-entomology
+Between which countries is the longest border? \n	a-china-russia		b-canada-usa	c-france-belgium	d-usa-mexico
+What is the word that represent how cars deal with air depending on their shape? \na-velocity		b-acceleration		c-body kit	d-aerodynamic
+Which country is brie cheese oiginated from? \n	a-switzerland	b-france	c-germany	d-poland

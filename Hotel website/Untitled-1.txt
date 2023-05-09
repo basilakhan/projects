@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="rooms/hotel_logo.jpg">
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body class="cover">
+<nav>
+    <ul>
+        <li class="logo"><a href="index.html">99%</a></li>
+        <li class="link"><a href="Login.html"><i class="bi bi-person"></i> Login</a></li>
+        <li class="link"><a href="FeedBack.html"><i class="bi bi-chat-left-text"></i> Feedback</a></li>
+        <li class="link"><a href="Registeration.html"><i class="bi bi-pencil-square"></i> Shop</a></li>
+        <li class="link"><a href="booking.html"><i class="bi bi-calendar"></i>   PC Builder</a></li>
+        <li class="link"><a href="index.html"><i class="bi bi-house"></i> Home</a></li>
+    </ul>
+</nav>
+
+<img>
+<h1 class="welcome">New Products, Great Deals</h1><br>
+
+<div class="intro">
+    <h2>Get To Know Us</h2>
+    <h3>Our Story</h3>><br>
+    <p> We founded 99% with one goal in mind: providing a high-quality, smart, and reliable online store. Our passion for<br>
+        excellence has driven us from the beginning, and continues to drive us into the future. We know that every product<br>
+        counts, and strive to make the entire shopping experience as rewarding as possible. Check it out for yourself!</p>
+</div><br>
+
+<div>
+    <form class="feedbackForm" name="feedForm" onsubmit="return validate()" action="" novalidate>
+        <legend class="header">Contact Us</legend>
+
+        <textarea class="message" rows="4" cols="50" placeholder="message..." autofocus></textarea><br>
+        <input class="name" name="fname" type="text" placeholder="Enter your name">
+        <input class="email" name="email" type="email" placeholder="Email" > <br>
+
+        <br>
+
+        <input class="submit" type="submit" value="SUBMIT FEEDBACK">
+    </form>
+</div>
+
+<!--Footer-->
+<div class="footer" align="center">
+    <small style="color: white;">Ⓒ 2023 by 99%, All Rights Reserved</small>
+</div>
+</body>
+
+</html>
